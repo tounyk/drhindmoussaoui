@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="fr" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cabinet Médical Dr Hind Moussaoui | Tanger - Médecine Générale & Suivis Spécialisés</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        medical: {
+                            50: '#f0fdfa',
+                            100: '#ccfbf1',
+                            200: '#99f6e4',
+                            500: '#14b8a6',
+                            600: '#0d9488',
+                            700: '#0f766e',
+                            800: '#115e59',
+                            900: '#134e4a',
+                        },
+                        navy: {
+                            800: '#0f172a',
+                            900: '#020617',
+                        },
+                        gold: {
+                            400: '#fbbf24',
+                            500: '#f59e0b',
+                            600: '#d97706',
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Plus Jakarta Sans', 'sans-serif'],
+                        serif: ['Playfair Display', 'serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        .glass-effect {
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+        }
+        .hero-gradient {
+            background: linear-gradient(135deg, rgba(15, 23, 42, 0.85) 0%, rgba(13, 148, 136, 0.75) 100%), url('https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&q=80&w=1920');
+            background-size: cover;
+            background-position: center;
+        }
+        .gold-border-glow:hover {
+            box-shadow: 0 10px 30px -10px rgba(217, 119, 6, 0.3);
+        }
+        .custom-card-shadow {
+            box-shadow: 0 20px 40px -15px rgba(15, 23, 42, 0.07);
+        }
+    </style>
+</head>
+<body class="font-sans bg-slate-50 text-slate-800 antialiased selection:bg-medical-500 selection:text-white">
+
+    <!-- Top Bar Pro -->
+    <div class="bg-navy-900 text-slate-300 text-xs py-2.5 px-4 sm:px-8 border-b border-slate-800">
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-2">
+            <div class="flex items-center space-x-6">
+                <span class="flex items-center gap-1.5"><i class="fa-solid fa-location-dot text-medical-500"></i> Tanger, Maroc (Avenue Mohammed V)</span>
+                <span class="hidden sm:flex items-center gap-1.5"><i class="fa-solid fa-clock text-medical-500"></i> Lun - Ven: 09h00 - 18h00 | Sam: 09h00 - 13h00</span>
+            </div>
+            <div class="flex items-center space-x-4">
+                <div class="flex items-center gap-2 bg-slate-800/80 px-3 py-1 rounded-full border border-slate-700/60">
+                    <i class="fa-solid fa-envelope-circle-check text-gold-400"></i>
+                    <span class="text-slate-200 font-medium">Email Officiel:</span>
+                    <a href="mailto:contact@drhindmoussaoui.ma" class="text-medical-200 hover:text-white font-semibold transition">contact@drhindmoussaoui.ma</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Header Navigation -->
+    <header class="sticky top-0 z-50 glass-effect border-b border-slate-200/80">
+        <div class="max-w-7xl mx-auto px-4 sm:px-8 py-4 flex items-center justify-between">
+            <!-- Logo -->
+            <a href="#" class="flex items-center gap-3 group">
+                <div class="w-12 h-12 rounded-xl bg-gradient-to-tr from-navy-900 via-medical-700 to-medical-500 text-white flex items-center justify-center font-serif text-2xl font-bold shadow-md group-hover:scale-105 transition transform">
+                    HM
+                </div>
+                <div>
+                    <span class="block font-serif text-xl sm:text-2xl font-bold text-navy-900 tracking-tight">Dr Hind Moussaoui</span>
+                    <span class="block text-xs uppercase tracking-widest text-medical-600 font-semibold">Cabinet Médical à Tanger</span>
+                </div>
+            </a>
+
+            <!-- Menu Desktop -->
+            <nav class="hidden lg:flex items-center space-x-8 font-medium text-sm text-slate-700">
+                <a href="#accueil" class="hover:text-medical-600 transition">Accueil</a>
+                <a href="#expertises" class="hover:text-medical-600 transition">Savoir-Faire & Expertises</a>
+                <a href="#cabinet" class="hover:text-medical-600 transition">Le Cabinet</a>
+                <a href="#avis" class="hover:text-medical-600 transition">Avis Patients</a>
+                <a href="#contact" class="hover:text-medical-600 transition">Localisation</a>
+            </nav>
+
+            <!-- CTA Button -->
+            <div class="hidden sm:flex items-center gap-3">
+                <a href="#rdv" class="bg-gradient-to-r from-medical-600 to-medical-700 hover:from-medical-700 hover:to-medical-800 text-white text-sm font-semibold px-5 py-2.5 rounded-full shadow-lg shadow-medical-600/20 hover:shadow-xl hover:shadow-medical-600/30 transition duration-300 flex items-center gap-2">
+                    <i class="fa-regular fa-calendar-check text-gold-400"></i>
+                    <span>Prendre Rendez-vous</span>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="accueil" class="relative hero-gradient text-white py-24 lg:py-32 overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-8 relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+            
+            <div class="lg:col-span-7 space-y-6">
+                <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-xs font-semibold tracking-wide uppercase text-medical-100">
+                    <i class="fa-solid fa-certificate text-gold-400"></i> Excellence Médicale à Tanger
+                </div>
+                
+                <h1 class="font-serif text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight">
+                    Votre santé entre des mains d'exception et de confiance.
+                </h1>
+                
+                <p class="text-slate-200 text-lg sm:text-xl font-light max-w-2xl leading-relaxed">
+                    Le cabinet du <strong class="text-white font-medium">Dr Hind Moussaoui</strong> offre une prise en charge médicale globale à Tanger, alliant suivi gynécologique rigoureux, gestion avancée du diabète, de l'hypertension et médecine générale.
+                </p>
+
+                <!-- Badges -->
+                <div class="pt-4 flex flex-wrap gap-4 text-sm font-medium">
+                    <div class="flex items-center gap-2 bg-navy-900/60 backdrop-blur-md px-4 py-2.5 rounded-xl border border-white/10">
+                        <i class="fa-solid fa-baby-carriage text-medical-200"></i> Suivi de Grossesse
+                    </div>
+                    <div class="flex items-center gap-2 bg-navy-900/60 backdrop-blur-md px-4 py-2.5 rounded-xl border border-white/10">
+                        <i class="fa-solid fa-heart-pulse text-gold-400"></i> Diabète & HTA
+                    </div>
+                    <div class="flex items-center gap-2 bg-navy-900/60 backdrop-blur-md px-4 py-2.5 rounded-xl border border-white/10">
+                        <i class="fa-solid fa-stethoscope text-medical-200"></i> Médecine Générale
+                    </div>
+                </div>
+
+                <div class="pt-6 flex flex-col sm:flex-row gap-4">
+                    <a href="#rdv" class="bg-gold-500 hover:bg-gold-600 text-navy-900 font-bold px-8 py-3.5 rounded-xl text-center shadow-lg hover:scale-105 transition transform">
+                        Prendre une Consultation
+                    </a>
+                    <a href="tel:+212539000000" class="bg-white/10 hover:bg-white/20 text-white font-semibold px-8 py-3.5 rounded-xl text-center border border-white/30 backdrop-blur-md transition flex items-center justify-center gap-2">
+                        <i class="fa-solid fa-phone"></i> Appeler le Cabinet
+                    </a>
+                </div>
+            </div>
+
+            <!-- Floating Card Highlight -->
+            <div class="lg:col-span-5">
+                <div class="bg-white text-slate-800 p-8 rounded-3xl shadow-2xl space-y-6 relative border border-slate-100">
+                    <div class="flex items-center justify-between pb-4 border-b border-slate-100">
+                        <div>
+                            <span class="text-xs font-bold text-medical-600 uppercase tracking-wider">Identité Officielle</span>
+                            <h3 class="font-serif text-xl font-bold text-navy-900">Dr Hind Moussaoui</h3>
+                        </div>
+                        <div class="w-10 h-10 rounded-full bg-medical-50 text-medical-600 flex items-center justify-center">
+                            <i class="fa-solid fa-user-doctor text-lg"></i>
+                        </div>
+                    </div>
+
+                    <p class="text-sm text-slate-600 leading-relaxed">
+                        Accompagnement médical attentionné et personnalisé pour chaque étape de la vie de la femme et de la famille.
+                    </p>
+
+                    <div class="space-y-3 bg-slate-50 p-4 rounded-xl border border-slate-100 text-sm">
+                        <div class="flex items-center gap-3">
+                            <i class="fa-solid fa-envelope text-medical-600"></i>
+                            <div>
+                                <span class="block text-xs text-slate-400">Courriel direct</span>
+                                <span class="font-semibold text-slate-800">contact@drhindmoussaoui.ma</span>
+                            </div>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <i class="fa-solid fa-map-location-dot text-medical-600"></i>
+                            <div>
+                                <span class="block text-xs text-slate-400">Ville</span>
+                                <span class="font-semibold text-slate-800">Tanger, Maroc</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="pt-2">
+                        <div class="p-3 rounded-lg bg-medical-50 border border-medical-100 text-xs text-medical-800 flex items-center gap-2">
+                            <i class="fa-solid fa-circle-check text-medical-600 text-sm"></i>
+                            <span>Cabinet ouvert aux nouvelles patientes et suivis chroniques.</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Expertise Section -->
+    <section id="expertises" class="py-20 bg-slate-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16 space-y-3">
+                <span class="text-xs font-bold uppercase tracking-widest text-medical-600">Nos Pôles de Compétences</span>
+                <h2 class="font-serif text-3xl sm:text-4xl font-bold text-navy-900">Une expertise médicale spécialisée au service de votre santé</h2>
+                <div class="w-16 h-1 bg-gold-500 mx-auto rounded-full"></div>
+                <p class="text-slate-600">Des équipements adaptés et un suivi médical rigoureux garantissent des consultations d'une haute précision.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Card 1 -->
+                <div class="bg-white p-8 rounded-2xl custom-card-shadow border border-slate-100 hover:border-medical-200 transition duration-300 gold-border-glow flex flex-col justify-between">
+                    <div>
+                        <div class="w-14 h-14 rounded-2xl bg-medical-50 text-medical-600 flex items-center justify-center text-2xl mb-6">
+                            <i class="fa-solid fa-baby"></i>
+                        </div>
+                        <h3 class="font-serif text-xl font-bold text-navy-900 mb-3">Suivi de Grossesse</h3>
+                        <p class="text-slate-600 text-sm leading-relaxed mb-6">
+                            Accompagnement complet tout au long de votre maternité : consultations prénatales régulières, bilans biologiques et conseils de prévention jusqu'à l'accouchement.
+                        </p>
+                    </div>
+                    <ul class="text-xs text-slate-500 space-y-2 border-t border-slate-100 pt-4">
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-medical-500"></i> Suivi trimestriel structuré</li>
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-medical-500"></i> Bilan prénatal & conseils nutritionnels</li>
+                    </ul>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="bg-white p-8 rounded-2xl custom-card-shadow border border-slate-100 hover:border-medical-200 transition duration-300 gold-border-glow flex flex-col justify-between">
+                    <div>
+                        <div class="w-14 h-14 rounded-2xl bg-medical-50 text-medical-600 flex items-center justify-center text-2xl mb-6">
+                            <i class="fa-solid fa-heart-pulse"></i>
+                        </div>
+                        <h3 class="font-serif text-xl font-bold text-navy-900 mb-3">Diabète & Hypertension (HTA)</h3>
+                        <p class="text-slate-600 text-sm leading-relaxed mb-6">
+                            Prise en charge spécialisée et personnalisée des maladies chroniques cardiovasculaires et métaboliques afin d'assurer un équilibre optimal et de prévenir les complications.
+                        </p>
+                    </div>
+                    <ul class="text-xs text-slate-500 space-y-2 border-t border-slate-100 pt-4">
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-medical-500"></i> Contrôle de la tension & de la glycémie</li>
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-medical-500"></i> Ajustement thérapeutique régulier</li>
+                    </ul>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="bg-white p-8 rounded-2xl custom-card-shadow border border-slate-100 hover:border-medical-200 transition duration-300 gold-border-glow flex flex-col justify-between">
+                    <div>
+                        <div class="w-14 h-14 rounded-2xl bg-medical-50 text-medical-600 flex items-center justify-center text-2xl mb-6">
+                            <i class="fa-solid fa-stethoscope"></i>
+                        </div>
+                        <h3 class="font-serif text-xl font-bold text-navy-900 mb-3">Médecine Générale</h3>
+                        <p class="text-slate-600 text-sm leading-relaxed mb-6">
+                            Consultations pour enfants et adultes, bilans de santé, diagnostics cliniques et prévention pour l'ensemble des membres de la famille.
+                        </p>
+                    </div>
+                    <ul class="text-xs text-slate-500 space-y-2 border-t border-slate-100 pt-4">
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-medical-500"></i> Diagnostique global & bilans de prévention</li>
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-medical-500"></i> Traitement des urgences du quotidien</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Appointment Module -->
+    <section id="rdv" class="py-20 bg-slate-900 text-white relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-8 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+            
+            <div class="lg:col-span-5 space-y-6">
+                <span class="text-xs font-bold uppercase tracking-widest text-gold-400">Prise de Rendez-vous</span>
+                <h2 class="font-serif text-3xl sm:text-4xl font-bold">Réservez votre consultation en quelques clics</h2>
+                <p class="text-slate-300 text-sm leading-relaxed">
+                    Afin d'éviter toute attente inutile, sélectionnez le motif de votre consultation et indiquez votre créneau préféré. Notre secrétariat vous confirmera votre rendez-vous.
+                </p>
+
+                <div class="space-y-4 pt-4">
+                    <div class="flex items-center gap-4 bg-slate-800/80 p-4 rounded-xl border border-slate-700">
+                        <div class="w-10 h-10 rounded-full bg-medical-500/20 text-medical-300 flex items-center justify-center">
+                            <i class="fa-solid fa-phone"></i>
+                        </div>
+                        <div>
+                            <span class="block text-xs text-slate-400">Téléphone Direct Cabinet</span>
+                            <span class="text-sm font-semibold text-white">+212 539 00 00 00</span>
+                        </div>
+                    </div>
+
+                    <div class="flex items-center gap-4 bg-slate-800/80 p-4 rounded-xl border border-slate-700">
+                        <div class="w-10 h-10 rounded-full bg-gold-500/20 text-gold-400 flex items-center justify-center">
+                            <i class="fa-solid fa-at"></i>
+                        </div>
+                        <div>
+                            <span class="block text-xs text-slate-400">Email Officiel</span>
+                            <span class="text-sm font-semibold text-white">contact@drhindmoussaoui.ma</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Interactive Booking Form -->
+            <div class="lg:col-span-7 bg-white text-slate-800 p-8 rounded-3xl shadow-2xl">
+                <form id="bookingForm" class="space-y-4" onsubmit="handleBooking(event)">
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        <div>
+                            <label class="block text-xs font-bold text-slate-700 uppercase mb-1">Nom & Prénom *</label>
+                            <input type="text" required placeholder="Ex: Fatima Zahra" class="w-full px-4 py-3 rounded-xl border border-slate-200 text-sm focus:ring-2 focus:ring-medical-500 focus:outline-none">
+                        </div>
+                        <div>
+                            <label class="block text-xs font-bold text-slate-700 uppercase mb-1">Numéro de Téléphone *</label>
+                            <input type="tel" required placeholder="06XX XX XX XX" class="w-full px-4 py-3 rounded-xl border border-slate-200 text-sm focus:ring-2 focus:ring-medical-500 focus:outline-none">
+                        </div>
+                    </div>
+
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        <div>
+                            <label class="block text-xs font-bold text-slate-700 uppercase mb-1">Motif de Consultation</label>
+                            <select class="w-full px-4 py-3 rounded-xl border border-slate-200 text-sm focus:ring-2 focus:ring-medical-500 focus:outline-none bg-white">
+                                <option>Consultation de Médecine Générale</option>
+                                <option>Suivi de Grossesse</option>
+                                <option>Suivi Diabète & Hypertension</option>
+                                <option>Bilan de Santé Global</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label class="block text-xs font-bold text-slate-700 uppercase mb-1">Date Souhaitée</label>
+                            <input type="date" required class="w-full px-4 py-3 rounded-xl border border-slate-200 text-sm focus:ring-2 focus:ring-medical-500 focus:outline-none">
+                        </div>
+                    </div>
+
+                    <div>
+                        <label class="block text-xs font-bold text-slate-700 uppercase mb-1">Message ou Précisions (Optionnel)</label>
+                        <textarea rows="3" placeholder="Précisez votre besoin si nécessaire..." class="w-full px-4 py-3 rounded-xl border border-slate-200 text-sm focus:ring-2 focus:ring-medical-500 focus:outline-none"></textarea>
+                    </div>
+
+                    <button type="submit" class="w-full bg-medical-600 hover:bg-medical-700 text-white font-bold py-4 rounded-xl text-center shadow-lg transition duration-300">
+                        Confirmer la Demande de Rendez-vous
+                    </button>
+                </form>
+
+                <!-- Confirmation Box Hidden by default -->
+                <div id="confirmationBox" class="hidden text-center py-8 space-y-4">
+                    <div class="w-16 h-16 bg-emerald-100 text-emerald-600 rounded-full flex items-center justify-center mx-auto text-3xl">
+                        <i class="fa-solid fa-circle-check"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-800">Demande Envoyée avec Succès !</h3>
+                    <p class="text-sm text-slate-600">
+                        Le secrétariat du Dr Hind Moussaoui vous recontactera très rapidement pour confirmer l'horaire retenu.
+                    </p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Patient Reviews & Trust -->
+    <section id="avis" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-8">
+            <div class="text-center max-w-2xl mx-auto mb-16 space-y-2">
+                <span class="text-xs font-bold uppercase tracking-widest text-medical-600">Avis & Retours Patients</span>
+                <h2 class="font-serif text-3xl font-bold text-navy-900">La confiance de nos patientes à Tanger</h2>
+                <div class="flex justify-center items-center gap-1 text-gold-500 pt-2">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <span class="text-slate-700 font-semibold text-sm ml-2">Avis vérifiés Google Maps</span>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Review 1 -->
+                <div class="bg-slate-50 p-6 rounded-2xl border border-slate-100 space-y-4">
+                    <p class="text-slate-600 text-sm italic">
+                        "Excellente médecin ! Très à l'écoute et bienveillante pour le suivi de ma grossesse. Elle prend vraiment le temps de tout expliquer."
+                    </p>
+                    <div class="flex items-center gap-3 pt-2">
+                        <div class="w-9 h-9 rounded-full bg-medical-200 text-medical-800 flex items-center justify-center font-bold text-xs">A.K</div>
+                        <div>
+                            <span class="block text-xs font-bold text-slate-800">Amina K.</span>
+                            <span class="block text-[10px] text-slate-400">Patiente à Tanger</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Review 2 -->
+                <div class="bg-slate-50 p-6 rounded-2xl border border-slate-100 space-y-4">
+                    <p class="text-slate-600 text-sm italic">
+                        "Cabinet très propre et professionnel. Le suivi du diabète de ma mère est irréprochable depuis que nous consultons le Dr Moussaoui."
+                    </p>
+                    <div class="flex items-center gap-3 pt-2">
+                        <div class="w-9 h-9 rounded-full bg-gold-400 text-navy-900 flex items-center justify-center font-bold text-xs">M.B</div>
+                        <div>
+                            <span class="block text-xs font-bold text-slate-800">Mohamed B.</span>
+                            <span class="block text-[10px] text-slate-400">Patient à Tanger</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Review 3 -->
+                <div class="bg-slate-50 p-6 rounded-2xl border border-slate-100 space-y-4">
+                    <p class="text-slate-600 text-sm italic">
+                        "Une prise en charge médicale très humaine. Cabinet moderne et accueil au top. Je recommande vivement !"
+                    </p>
+                    <div class="flex items-center gap-3 pt-2">
+                        <div class="w-9 h-9 rounded-full bg-medical-200 text-medical-800 flex items-center justify-center font-bold text-xs">S.L</div>
+                        <div>
+                            <span class="block text-xs font-bold text-slate-800">Salma L.</span>
+                            <span class="block text-[10px] text-slate-400">Patiente à Tanger</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer & Contact Section -->
+    <footer id="contact" class="bg-navy-900 text-slate-300 pt-16 pb-8 border-t border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-8 grid grid-cols-1 md:grid-cols-3 gap-12 pb-12 border-b border-slate-800">
+            
+            <div class="space-y-4">
+                <div class="flex items-center gap-3">
+                    <div class="w-10 h-10 rounded-lg bg-medical-600 text-white flex items-center justify-center font-serif text-xl font-bold">HM</div>
+                    <span class="font-serif text-xl font-bold text-white">Dr Hind Moussaoui</span>
+                </div>
+                <p class="text-sm text-slate-400 leading-relaxed">
+                    Cabinet de médecine générale, suivi spécialisé de grossesse, prise en charge du diabète et de l'hypertension artérielle à Tanger.
+                </p>
+            </div>
+
+            <div class="space-y-3">
+                <h4 class="text-white font-semibold text-sm uppercase tracking-wider">Contact Officiel</h4>
+                <p class="text-sm text-slate-400 flex items-center gap-2"><i class="fa-solid fa-location-dot text-medical-500"></i> Avenue Mohammed V, Tanger, Maroc</p>
+                <p class="text-sm text-slate-400 flex items-center gap-2"><i class="fa-solid fa-envelope text-gold-400"></i> contact@drhindmoussaoui.ma</p>
+                <p class="text-sm text-slate-400 flex items-center gap-2"><i class="fa-solid fa-phone text-medical-500"></i> +212 539 00 00 00</p>
+            </div>
+
+            <div class="space-y-3">
+                <h4 class="text-white font-semibold text-sm uppercase tracking-wider">Horaires de Consultation</h4>
+                <div class="text-sm text-slate-400 space-y-1">
+                    <p class="flex justify-between"><span>Lundi - Vendredi:</span> <span class="text-white">09h00 - 18h00</span></p>
+                    <p class="flex justify-between"><span>Samedi:</span> <span class="text-white">09h00 - 13h00</span></p>
+                    <p class="flex justify-between"><span>Dimanche:</span> <span class="text-rose-400">Fermé</span></p>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-8 pt-8 flex flex-col sm:flex-row justify-between items-center text-xs text-slate-500 gap-4">
+            <p>© 2026 Cabinet Médical Dr Hind Moussaoui. Tous droits réservés.</p>
+            <p>Conception Web Professionnelle & Démo VIP</p>
+        </div>
+    </footer>
+
+    <script>
+        function handleBooking(event) {
+            event.preventDefault();
+            document.getElementById('bookingForm').classList.add('hidden');
+            document.getElementById('confirmationBox').classList.remove('hidden');
+        }
+    </script>
+</body>
+</html>
